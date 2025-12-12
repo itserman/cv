@@ -27,8 +27,9 @@
 
 
 %contact
-\newcommand{\contactinfo}[3]{
-    #1\hspace{6pt}\href{#2}{#3}\hspace{6pt}
+\newcommand{\contactinfo}[3]{%
+    \href{#2}{\faIcon{#1}\ #3}%
+}
 }
 
 %education
@@ -108,13 +109,15 @@
     Physics Department\\
     ODTÜ / METU\\
     Ankara, TR, 06800
-\end{minipage}%
-%
+\end{minipage}
+
+
 
 \begin{minipage}[t]{0.40\textwidth}
-    \centering 
-    \contactinfo{\faEnvelope}{mailto:erman.durmaz@metu.edu.tr}{erman.durmaz@metu.edu.tr}\\
-    \contactinfo{\faLinkedin}{https://www.linkedin.com/in/mert-erman-durmaz/}{Mert Erman Durmaz}
+    \centering
+    % The command now makes the Icon AND the Text clickable
+    \contactinfo{envelope}{mailto:erman.durmaz@metu.edu.tr}{erman.durmaz@metu.edu.tr}\\
+    \contactinfo{linkedin}{https://www.linkedin.com/in/mert-erman-durmaz/}{Mert Erman Durmaz}
 \end{minipage}%
 
 
